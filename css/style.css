@@ -78,23 +78,30 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f4f4f9, #dfe3e8);
+    color: #333;
+}
+
+.hero-content {
     text-align: center;
-    background: #f7f7f7;
-    padding: 20px;
+    max-width: 600px;
+    z-index: 1;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
     color: #666;
 }
 
