@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.add('open'); // Add open animation
             header.classList.add('menu-open'); // Remove header shadow
         }
+        // Toggle visibility of menu icons
         openIcon.style.display = navbar.classList.contains('open') ? 'none' : 'block';
         closeIcon.style.display = navbar.classList.contains('open') ? 'block' : 'none';
     });
