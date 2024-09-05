@@ -21,4 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
         openIcon.style.display = navbar.classList.contains('open') ? 'none' : 'block';
         closeIcon.style.display = navbar.classList.contains('open') ? 'block' : 'none';
     });
+
+    const observerOptions = {
+        threshold: 0.5 // Trigger when 50% of the element is visible
+    };
+
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+        });
+    }, observerOptions);
+
+    // Select all elements with the class .fade-in-element
+    const fadeElements = document.querySelectorAll(".fade-in-element");
+    fadeElements.forEach(el => fadeInObserver.observe(el));
 });
