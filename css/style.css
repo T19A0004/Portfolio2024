@@ -150,6 +150,7 @@ section h2 {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    z-index: 2;
 }
 
 .avatar img {
@@ -267,6 +268,7 @@ section h2 {
     justify-content: center; /* Center the cards */
     max-width: 1200px;
     margin: 0 auto;
+    z-index: 2;
 }
 
 .project-card {
@@ -370,6 +372,7 @@ section h2 {
 .contact-form {
     flex: 1;
     min-width: 300px;
+    z-index: 2;
 }
 
 .contact-info {
