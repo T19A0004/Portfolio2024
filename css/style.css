@@ -273,7 +273,7 @@ section h2 {
 
 .project-card {
     position: relative;
-    overflow: hidden;
+    margin-top: 50px;
     flex: 1 1 calc(33.333% - 20px); /* Three cards per row with space for gaps */
     max-width: calc(33.333% - 20px);
     border-radius: 8px;
@@ -285,7 +285,7 @@ section h2 {
 
 .project-card img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     display: block;
     transition: opacity 0.3s ease;
@@ -325,9 +325,26 @@ section h2 {
     transform: translateY(-5px);
 }
 
-.project-card:hover img {
-    opacity: 0.9; /* Slightly fade the image on hover */
+/* Peeking Cat */
+img.peeking-cat {
+    position: absolute;
+    top: -9%;
+    left: -50px;
+    transform: scale(0.5);
+    transition: 2s;
+    z-index: -1; /* Make sure it's behind the project card */
 }
+
+.project-card:hover .peeking-cat {
+    transform: translateY(-85px) scale(0.5);
+}
+
+/* Hover Effects */
+.project-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
 
 /* Contact Section */
 #contact {
