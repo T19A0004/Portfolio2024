@@ -354,7 +354,7 @@ img.peeking-cat {
 }
 
 .project-card:hover .peeking-cat {
-    transform: translateY(-85px) scale(0.5);
+    transform: translateY(-90px) scale(0.5);
 }
 
 
