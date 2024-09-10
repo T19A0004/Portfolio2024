@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const openIcon = document.querySelector('.open-icon');
     const closeIcon = document.querySelector('.close-icon');
+    const welcome = document.querySelector('.hero-content svg');
+
+    function draw() {
+        welcome.classList.add('active')
+    }
+    draw();
 
     menuToggle.addEventListener('click', () => {
         if (navbar.classList.contains('open')) {
