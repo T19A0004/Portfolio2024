@@ -29,7 +29,9 @@ header {
     padding: 20px;
     position: sticky;
     top: 0;
-    background: #fff;
+    background: rgba( 255, 255, 255, 0.55 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
@@ -51,7 +53,8 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    padding-right: 30px;
 }
 
 nav a {
@@ -166,6 +169,10 @@ section h2 {
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 2;
+}
+
+.about-content:hover {
+    cursor: pointer;
 }
 
 .avatar img {
@@ -341,6 +348,7 @@ section h2 {
 .project-card:hover {
     box-shadow: 0 8px 32px 0 rgba(56, 65, 185, 0.37);
     transform: translateY(-5px);
+    cursor: pointer;
 }
 
 /* Peeking Cat */
@@ -401,6 +409,10 @@ img.peeking-cat {
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 2;
+}
+
+.contact-content:hover {
+    cursor: pointer;
 }
 
 .contact-info,
@@ -546,7 +558,9 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: rgba( 255, 255, 255, 0.55 );
+        backdrop-filter: blur( 6.5px );
+        -webkit-backdrop-filter: blur( 6.5px );
         display: none;
         flex-direction: column;
         gap: 10px;
@@ -573,6 +587,7 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 10px;
+        padding-right: 0px;
     }
 
     nav ul li:last-child{
