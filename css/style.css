@@ -366,6 +366,35 @@ img.peeking-cat {
 }
 
 
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: #4caf50; /* Green color for success */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notification.hidden {
+    transform: translateX(-50%) translateY(-50px); /* Start off-screen */
+}
+
+.notification.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0); /* Slide in */
+}
+
+
 /* Contact Section */
 #contact {
     background: #f0f4f8; /* Soft background color for contrast */
