@@ -116,7 +116,6 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    padding-right: 30px;
 }
 
 nav a {
@@ -144,6 +143,62 @@ nav a:hover {
     width: 24px;
     height: 24px;
 }
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    border: 2px solid #333;
+    border-radius: 8px; /* Rounded corners for better UI */
+    overflow: hidden; /* Ensures no overflow for rounded corners */
+    width: fit-content;
+}
+
+.language-switcher button {
+    background-color: #333;
+    border-radius: 8px; /* Rounded corners for better UI */
+    border: none;
+    padding: 8px 15px; /* Increase padding for better clickability */
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    flex: 1; /* Buttons take equal width */
+    transition: background-color 0.3s, color 0.3s, padding 0.3s;
+}
+
+.language-switcher button:not(.active) {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    border: none;
+}
+
+.language-switcher button.active {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .language-switcher button {
+        font-size: 10px; /* Smaller text for small screens */
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-switcher {
+        flex-direction: column; /* Stack buttons vertically on very small devices */
+        width: auto;
+    }
+
+    .language-switcher button {
+        font-size: 8px;
+        padding: 6px 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -678,7 +733,6 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 10px;
-        padding-right: 0px;
     }
 
     nav ul li:last-child{
