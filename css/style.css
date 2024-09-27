@@ -293,14 +293,14 @@ section h2 {
 .avatar img {
     width: 100%;
     max-width: 250px;
-    border-radius: 50%;
-    border: 6px solid #e0e7ff;
+    border: 6px solid #007acc;
+    border-radius: 47% 53% 54% 46% / 53% 40% 60% 47%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    transition: border-radius 0.5s ease-in-out;
 }
 
 .avatar img:hover {
-    transform: scale(1.05);
+    border-radius: 62% 38% 66% 34% / 43% 65% 35% 57%;
 }
 
 .intro-text {
